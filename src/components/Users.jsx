@@ -6,7 +6,7 @@ export default function Users({ setSelectedUser }) {
   const users = useUsers();
 
   return (
-    <div>
+    <>
       {users.isLoading && <p>Loading users...</p>}
       {users.isError && <p>Could not fetch users...</p>}
       {
@@ -19,7 +19,7 @@ export default function Users({ setSelectedUser }) {
           }
         </ul>
       }
-    </div>
+    </>
   );
 }
 
