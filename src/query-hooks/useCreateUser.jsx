@@ -7,6 +7,6 @@ export default function useCreateUser(user) {
   const queryClient = useQueryClient();
 
   return useMutation((user) => createUser(user), {
-    onSuccess: () => queryClient.invalidateQueries('users')
+    onSuccess: (data) => queryClient.setQueryData(['users', 10], data),
   });
 };

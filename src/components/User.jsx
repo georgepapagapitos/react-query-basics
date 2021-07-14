@@ -8,7 +8,7 @@ export default function User({ selectedUser }) {
   return (
     <>
       {user.isLoading && <p>Loading user...</p>}
-      {user.isSuccess && (<p>{`${user.data.name} lives on ${user.data.address.street}`}</p>)}
+      {user.isSuccess && (<p>{`${user.data.name}`}</p>)}
     </>
   );
 }
