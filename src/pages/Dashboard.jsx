@@ -5,6 +5,7 @@ import User from '../components/User';
 import Users from '../components/Users';
 import styles from '../App.module.scss';
 import Header from '../components/Header';
+import styled from 'styled-components';
 
 export default function Dashboard() {
 
@@ -18,6 +19,8 @@ export default function Dashboard() {
       <Header />
       <h1 className={headerText.length > 5 ? styles.header : null}>{headerText}</h1>
 
+      <StyledButton>I want this to be red</StyledButton>
+
       <Users setSelectedUser={setSelectedUser} />
       <hr />
       <User selectedUser={selectedUser} />
@@ -27,3 +30,8 @@ export default function Dashboard() {
     </>
   );
 }
+
+const StyledButton = styled.button`
+  background-color: red;
+  color: white;
+`
